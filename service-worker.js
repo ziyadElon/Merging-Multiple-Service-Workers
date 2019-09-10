@@ -6,8 +6,8 @@
 
 var CACHE_VERSION = 'v2';
 var CACHE_NAME = CACHE_VERSION + ':sw-cache-';
-var jsBundle =  "https://www.treniq.com/assets/spree/frontend/all-d61a5323e1acb07ccebb4559fde36d4f.js";
-var cssBundle =  "https://www.treniq.com/assets/application-dc0774ebec252f3f186e067e4c04bccb.css";
+var jsBundle =  "[absolute-path-to-js-bundle]";
+var cssBundle =  "[absolute-path-to-css-bundle]";
 
 function onInstall(event) {
   self.skipWaiting();
@@ -15,7 +15,6 @@ function onInstall(event) {
     caches.open(CACHE_NAME).then(function prefill(cache) {
       return cache.addAll([
         "/",
-        "https://www.treniq.com/assets/collect_chat-37e26c9341f41be4d08a481c9da31508.js",
         "https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js",
         "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.css",
         "//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.js",
